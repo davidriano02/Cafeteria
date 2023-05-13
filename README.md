@@ -25,5 +25,8 @@ php artisan db:seed --class=seederTableCliente
 php artisan db:seed --class=seederTableCategoria
 
 Una vez realizados estos pasos, se tendrá el proyecto de Laravel instalado y con datos de prueba en la base de datos local. importante realizar los seeder  ya que se necesitan datos en la tabla categoria y en la tabla cliente para el correcto funcionamiento.
-12. En la ruta database queda el exportable de la base de datos 
-11. debes registrate para poder ingresar  
+13. En la ruta database queda el exportable de la base de datos 
+14. debes registrate para poder ingresar  
+15. inicio ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/380d388c-7ace-4219-aa76-087dd3c6e2e5)
+![image](https://github.com/davidriano02/Cafeteria/assets/132162397/f99f9ae1-fb31-4472-a865-f1f614e14b66)
+
