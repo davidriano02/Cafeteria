@@ -4,22 +4,37 @@
 
 @section('content_header')
 <h1 class="mb-4 text-center">
-        <span class="font-weight-bold text-primary">Nueva venta</span>
-        <i class="fa fa-shopping-cart fa-lg ml-2 text-success"></i>
-    </h1>
+    <span class="font-weight-bold text-primary">Nueva venta</span>
+    <i class="fa fa-shopping-cart fa-lg ml-2 text-success"></i>
+</h1>
 @stop
 
 @section("content")
 <div class="row">
     <div class="col-12">
-    
+
         @include("notificaciones")
         <div class="row">
+
+            <div class="col-12 col-md-6">
+                <form action="{{route('agregarProductoVenta')}}" method="post">
+                    @csrf
+                    <div class="form-group">
+                        <label for="codigobar">Código</label>
+                        <div class="input-group">
+                            <input id="codigobar" autocomplete="off" required autofocus name="codigobar" type="text" class="form-control" placeholder="Código">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <div class="col-12 col-md-6">
                 <form action="{{route('terminarOCancelarVenta')}}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="id_cliente">Cliente</label>
+                        <label for="id_cliente">Selecione el Cliente y Oprima terminar</label>
                         <select required class="form-control" name="id_cliente" id="id_cliente">
                             @foreach($clientes as $cliente)
                             <option value="{{$cliente->id}}">{{$cliente->nombre}}</option>
@@ -32,21 +47,6 @@
                         <button name="accion" value="cancelar" type="submit" class="btn btn-danger">Cancelar venta</button>
                     </div>
                     @endif
-                </form>
-            </div>
-            <div class="col-12 col-md-6">
-                <form action="{{route('agregarProductoVenta')}}" method="post">
-                    @csrf
-                    <div class="form-group">
-                        <label for="codigobar">Código</label>
-                        <div class="input-group">
-                            <input id="codigobar" autocomplete="off" required autofocus name="codigobar" type="text"
-                                class="form-control" placeholder="Código">
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
                 </form>
             </div>
         </div>
@@ -87,20 +87,22 @@
         </div>
         @else
         <div class="d-flex justify-content-center align-items-center flex-column">
-    <h2 class="text-center mb-4">Aquí aparecerán los productos de la venta</h2>
-    
-</div>
-            @endif
+            <h2 class="text-center mb-4">Aquí aparecerán los productos de la venta</h2>
+
         </div>
+        @endif
     </div>
+</div>
 @stop
 
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-    <script src="{{ asset('js/adminlte.min.js') }}"></script>
+<link rel="stylesheet" href="/css/admin_custom.css">
+<script src="{{ asset('js/adminlte.min.js') }}"></script>
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    console.log('Hi!');
+</script>
 @stop
