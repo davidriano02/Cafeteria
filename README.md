@@ -28,17 +28,18 @@ Una vez realizados estos pasos, se tendrá el proyecto de Laravel instalado y co
 13. En la ruta database queda el exportable de la base de datos 
 14. debes registrate para poder ingresar  
 
-15. inicio   ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/380d388c-7ace-4219-aa76-087dd3c6e2e5)
-
-16. vista productos  ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/a790c802-f3b1-40d0-b3a9-f175086926ab)
-
-17. formulario de crear producto  ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/2f9ee1a9-7871-4e60-adff-da3d2c911878)
-
-18. vista de vender  ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/fc369bf1-0fa4-4876-98d4-6502d4e2c3f5)
-
-19. vistas de ventas  ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/7471aa61-ff32-4003-ab37-80194f676df6)
-
-20. vista detalle ventas  ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/df60bf0a-8392-421a-a9b9-93a6467724c3)
+15. inicio  
+ ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/380d388c-7ace-4219-aa76-087dd3c6e2e5)
+16. vista productos  
+![image](https://github.com/davidriano02/Cafeteria/assets/132162397/a790c802-f3b1-40d0-b3a9-f175086926ab)
+17. formulario de crear producto  
+![image](https://github.com/davidriano02/Cafeteria/assets/132162397/2f9ee1a9-7871-4e60-adff-da3d2c911878)
+18. vista de vender 
+![image](https://github.com/davidriano02/Cafeteria/assets/132162397/fc369bf1-0fa4-4876-98d4-6502d4e2c3f5)
+19. vistas de ventas 
+ ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/7471aa61-ff32-4003-ab37-80194f676df6)
+20. vista detalle ventas 
+ ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/df60bf0a-8392-421a-a9b9-93a6467724c3)
 
 
 
