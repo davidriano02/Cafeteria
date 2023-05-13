@@ -14,8 +14,9 @@ Pasos para descargar el proyecto de GitHub, instalar XAMPP, realizar las migraci
 9. Crear la base de datos en el servidor local de MySQL.
 
 10. Realizar las migraciones de la base de datos con el siguiente comando en la terminal dentro de la carpeta del proyecto: php artisan migrate
-11.Generar datos aleatorios en la base de datos con los siguientes comandos en la terminal dentro de la carpeta del proyecto:
 
+11.Generar datos aleatorios en la base de datos con los siguientes comandos en la terminal dentro de la carpeta del proyecto:
+correr estos comandos 
 php artisan db:seed --class=UserSeeder
 php artisan db:seed --class=seederTableCategoria
 Una vez realizados estos pasos, se tendrá el proyecto de Laravel instalado y con datos de prueba en la base de datos local. importante realizar los seeder  ya que se necesitan datos en la tabla categoria y en la tabla cliente para el correcto funcionamiento.
