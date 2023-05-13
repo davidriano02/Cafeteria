@@ -27,7 +27,7 @@ php artisan db:seed --class=seederTableCategoria
 Una vez realizados estos pasos, se tendrá el proyecto de Laravel instalado y con datos de prueba en la base de datos local. importante realizar los seeder  ya que se necesitan datos en la tabla categoria y en la tabla cliente para el correcto funcionamiento.
 13. En la ruta database queda el exportable de la base de datos 
 14. debes registrate para poder ingresar  
-
+sofware para cafeteria Konecta donde se puede agregar producto, vender producto y cuando se vende se resta del stock 
 15. inicio  
  ![image](https://github.com/davidriano02/Cafeteria/assets/132162397/380d388c-7ace-4219-aa76-087dd3c6e2e5)
 16. vista productos  
