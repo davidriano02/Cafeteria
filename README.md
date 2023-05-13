@@ -7,7 +7,7 @@ Pasos para descargar el proyecto de GitHub, instalar XAMPP, realizar las migraci
 3. Descargar e instalar Composer: Descargar e instalar Composer en tu ordenador
 4.  Clonar el repositorio  git clone https://github.com/davidriano02/Cafeteria.git
 5. Navegar a la carpeta del proyecto descargado: cd nombre_proyecto
-5. Instalar las dependencias de Laravel con Composer. Para esto, se debe ejecutar el siguiente comando en    la    terminal dentro de la carpeta del proyecto:composer install
+5. Instalar las dependencias de Laravel con Composer. Para esto, se debe ejecutar el siguiente comando en    la    terminal dentro de la carpeta del proyecto: composer install
 6. Generar la clave de aplicación de Laravel con el siguiente comando en la terminal dentro de la carpeta del proyecto:php artisan key:generate
 8. Configurar la conexión a la base de datos en el archivo ".env" según las credenciales de la base de datos local.
 
@@ -19,6 +19,8 @@ Pasos para descargar el proyecto de GitHub, instalar XAMPP, realizar las migraci
 correr estos comandos 
 
 php artisan db:seed --class=UserSeeder
+
+php artisan db:seed --class=seederTableCliente
 
 php artisan db:seed --class=seederTableCategoria
 

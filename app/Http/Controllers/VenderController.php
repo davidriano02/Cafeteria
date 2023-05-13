@@ -99,12 +99,12 @@ class VenderController extends Controller
                 ->route("vender.index")
                 ->with("mensaje", "Producto no encontrado");
         }
-        $this->agregarProductoACarrito($producto);
+        $this->agregarProductoACarrito( $request,$producto);
         return redirect()
             ->route("vender.index");
     }
 
-    private function agregarProductoACarrito($producto)
+    private function agregarProductoACarrito( $request ,$producto)
     {
         if ($producto->stock <= 0) {
             return redirect()->route("vender.index")
@@ -129,7 +129,8 @@ class VenderController extends Controller
             }
             $productos[$posibleIndice]->cantidad++;
         }
-        $this->guardarProductos($productos);
+        // guardar la información del cliente en la sesión
+        session(["productos" => $productos, "cliente" => Cliente::find($request->input("id_cliente"))]);
     }
 
     private function buscarIndiceDeProducto(string $codigo, array & $productos)
@@ -151,13 +152,17 @@ class VenderController extends Controller
     {
         
         $total = 0;
-        foreach ($this->obtenerProductos() as $producto) {
-            $total += $producto->cantidad * $producto->precio;
-        }
-        return view("vender.vender",
-            [
-                "total" => $total,
-                "clientes" => Cliente::all(),
-            ]);
+    foreach ($this->obtenerProductos() as $producto) {
+        $total += $producto->cantidad * $producto->precio;
     }
+    $cliente = session("cliente"); // obtener información del cliente de la sesión
+    return view("vender.vender",
+        [
+            "total" => $total,
+            "clientes" => Cliente::all(),
+            "cliente" => $cliente // pasar la información del cliente a la vista
+        ]);
+    }
+
+    
 }

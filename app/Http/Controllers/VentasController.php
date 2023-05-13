@@ -12,9 +12,16 @@ use Illuminate\Support\Facades\DB;
 class VentasController extends Controller
 {
 
-    
 
-    
+
+    /** 
+     * Este método muestra una lista de todas las ventas realizadas, 
+     * junto con el total de cada venta. Se utiliza una consulta SQL 
+     * para unir las tablas de ventas y productos vendidos, y luego 
+     * sumar el precio de cada producto multiplicado por la cantidad vendida 
+     * para obtener el total de la venta. Los resultados se pasan a una vista 
+     * para mostrarlos al usuario.
+     */
     public function index()
     {
         $ventasConTotales = Venta::join("productos_vendidos", "productos_vendidos.id_venta", "=", "ventas.id")
@@ -33,7 +40,7 @@ class VentasController extends Controller
         }
         return view("ventas.ventas_show", [
             "venta" => $venta,
-            "detalle_venta" => $venta->productos, 
+            "detalle_venta" => $venta->productos,
             "total" => $total,
         ]);
     }
@@ -45,4 +52,3 @@ class VentasController extends Controller
         return redirect()->route("ventas.index")->with("mensaje", "Venta eliminada");
     }
 }
-

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'CRUD con Laravel 8')
+@section('title', 'Konecta')
 
 @section('content_header')
    <h1>Crear Producto</h1>
